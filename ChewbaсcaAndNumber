@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+int main() {
+	string x;
+	cin >> x;
+	for (long long int i = 0; i < x.length(); i++){
+		if (x[i] - '0' > 4){ 
+	     int a = x[i]-48;
+	      	a= 9-a;
+		if(!a && !i) continue;
+ 
+	     x[i] = a +'0';
+		} 
+ 
+ 
+	}
+				cout<<x<<endl;
+ 
+	return 0;
+}
