@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int n, k;
+	int sumtime = 0,totalTime ,c=0;
+	while (cin>>n>>k) {
+		totalTime = 240 - k;
+		for (int j = 1; j <= n; j++) {
+			sumtime += (j * 5);
+			if (totalTime < sumtime) {
+				break;
+			}
+			else {
+				c++;
+		}
+		}
+	
+			cout << c << endl;
+		
+	}
+	//system("pause");
+	return 0;
+}
