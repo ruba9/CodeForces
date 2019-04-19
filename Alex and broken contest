@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+	char * arr = new char[105];
+	cin >> arr;
+	int freq[5] = { 0 };
+	for (int i = 0; arr[i] != '\0'; i++) {
+		if (arr[i] == '_') {
+			continue;
+		}
+		else if (arr[i] == 'D' && arr[i + 1] == 'a' && arr[i + 2] == 'n' && arr[i + 3] == 'i' && arr[i + 4] == 'l') {
+			freq[0] ++;
+		
+		}
+		else if (arr[i] == 'O' && arr[i + 1] == 'l' && arr[i + 2] == 'y' && arr[i + 3] == 'a') {
+			freq[1] ++;
+			
+		}
+		else if (arr[i] == 'S' && arr[i + 1] == 'l' && arr[i + 2] == 'a' && arr[i + 3] == 'v' && arr[i+4] == 'a') {
+			freq[2] ++;
+			
+		}
+		else if (arr[i] == 'A' && arr[i + 1] == 'n' && arr[i + 2] == 'n' ) {
+			freq[3]++;
+		
+		}
+		else if (arr[i] == 'N' && arr[i + 1] == 'i' && arr[i + 2] == 'k' && arr[i + 3] == 'i' && arr[i + 4] == 't' && arr[i + 5] == 'a') {
+			freq[4] ++;
+		}
+	}
+	
+	
+		if (freq[0] == 1 &&  freq[1]==0 && freq[2] == 0 && freq[3] ==0 && freq[4]==0)  {
+			cout << "YES" << endl;
+		}
+		else if(freq[0] == 0 && freq[1] == 1 && freq[2] == 0 && freq[3] == 0 && freq[4] == 0)
+		{
+			cout << "YES" << endl;
+		}
+		else if (freq[0] == 0 && freq[1] == 0 && freq[2] == 1 && freq[3] == 0 && freq[4] == 0)
+		{
+			cout << "YES" << endl;
+		}
+		else if (freq[0] == 0 && freq[1] == 0 && freq[2] == 0 && freq[3] == 1 && freq[4] == 0) {
+			cout << "YES" << endl;
+		}
+		else if (freq[0] == 0 && freq[1] == 0 && freq[2] == 0 && freq[3] == 0 && freq[4] == 1) {
+			cout << "YES" << endl;
+		}
+		else {
+			cout << "NO" << endl;
+		}
+		
+			
+	
+
+
+//	system("pause");
+	return 0;
+}
