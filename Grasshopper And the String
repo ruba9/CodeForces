@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	char *arr = new char[100];
+	cin >> arr;
+	int hop = -1;
+	int max = 0;
+	int i = 0;
+	for (i = 0; arr[i] != '\0'; i++) {
+		if (arr[i] == 'A' || arr[i] == 'E' || arr[i] == 'I' || arr[i] == 'O' || arr[i] == 'Y' || arr[i] == 'U')
+		{
+			if ((i - hop) > max) {
+				max = i - hop;
+
+			}
+			hop = i;
+		}
+	}
+	if ((i - hop) > max) {
+		max = i - hop;
+
+	}
+	
+	if (max == 0) {
+		max = i + 1;
+	}
+	
+	cout << max << endl;
+//	system("pause");
+
+	return 0;
+}
