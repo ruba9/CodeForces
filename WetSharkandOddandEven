@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	long long  sum=0;
+	long long  odd=1e9;
+	scanf("%d",&n);
+	long long  arr[n];
+	for(int i=0; i < n ; i++){
+		     cin >> arr[i];
+		
+	}
+	
+	for(int j = 0; j < n ; j++){
+		
+		sum+=arr[j];
+		if(arr[j]%2==1 && arr[j] <= odd){
+			odd = arr[j];
+		
+		}
+	}
+
+if (sum%2!=0) {
+	sum -=odd;
+}
+
+
+cout<<sum<<endl;
+
+	return 0;
+}
