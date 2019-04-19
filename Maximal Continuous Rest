@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    long n,c=0;
+    long max =0;
+    cin>>n;
+    long long arr[2*n];
+    for(int i =0; i < n; i++)
+    {
+        cin>>arr[i];
+        arr[i+n]=arr[i];
+    }
+    for(int i = 0; i < 2*n; i++) {
+        if(arr[i]==1){
+            c++;
+            if(c > max) max = c;
+        }
+        else{
+            c=0;
+        } 
+    }
+    if(max < c) {
+        cout<<c<<endl;
+    }
+    else {
+        cout<<max<<endl;
+    }
+    return 0;
+}
