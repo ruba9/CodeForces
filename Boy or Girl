@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main () {
+    string s;
+    cin >> s;
+    
+    int distinct = 0;
+    for ( char c = 'a'; c <= 'z'; c++ ) {
+        for ( int i = 0; i < s.size(); ++i ) {
+            if ( c == s[ i ] ) {
+                distinct++; 
+                break;
+            }   
+        }
+    }
+    
+    if ( distinct % 2 == 0 ) {
+        cout << "CHAT WITH HER!";
+    } else {
+        cout << "IGNORE HIM!";
+    }
+    
+    return 0;
+}
