@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+void Hulk(int n) {
+    for(int i = 0; i < n; i++) {
+		if(i%2==0 && i != n-1) {
+		cout<<"I hate that ";
+			
+		}
+	     if(i==n-1 && i%2==0) {
+			cout<<"I hate it "<<endl;
+		}
+        if(i%2!=0 && i!=n-1) {
+		cout<<"I love that ";
+        }
+        if(i%2!=0 && i==n-1){
+        	cout<<"I love it "<<endl;
+        }
+    }
+}
+
+int main() {
+int n;
+cin>>n;
+
+Hulk(n);
+
+	return 0;
+}
