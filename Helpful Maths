@@ -1,0 +1,36 @@
+#include<bits/stdc++.h> 
+using namespace std;
+
+void SortString(string &s1) {
+  sort(s1.begin(),s1.end()); 
+ 
+}
+
+int main() {
+ string s,s1;
+  cin>>s;
+
+ for(int i = 0; i < s.length(); i++) {
+
+ 	if(s[i]!='+')
+ 	{
+ 	  	s1+=s[i];
+ 	  	
+ 	}
+ 	
+ 	else {
+ 	    continue;
+ 	}
+ 
+ }
+
+ SortString(s1);
+ 
+for(int i = 0; i < s1.length(); i++) {
+ cout << s1[i];
+   if(i+1!=s1.length())
+   cout<<"+";
+  
+}
+	return 0;
+}
