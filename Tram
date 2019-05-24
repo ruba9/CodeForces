@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n,a,b;
+	int currentCapacity = 0;
+	int max = 0;
+	cin>>n;
+	for(int i=0; i<n; i++) {
+		cin>>a>>b;
+		currentCapacity += b;
+		currentCapacity -=a;
+		if(max < currentCapacity) {
+			max = currentCapacity;
+		}
+	}
+	cout<<max<<endl;
+	return 0;
+}
