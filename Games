@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int home[31];
+int guest[31];
+int c;
+
+int main(){
+  int n;
+  cin >> n;
+  for(int i = 0; i < n; i++) {
+    cin >> home[i] >> guest[i];
+  }
+  for(int i = 0; i < n; i++) {
+    for(int k = 0; k < n; k++) {
+      if(home[i] == guest[k] && i != k) {
+         c++;
+      }
+    }
+  }
+  cout << c << endl;
+}
