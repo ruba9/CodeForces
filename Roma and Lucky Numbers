@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+ #include <bits/stdc++.h>
 
 using namespace std;
 
@@ -12,8 +12,9 @@ int main(){
     for(int j = 0;j < s.size();j++){
       if(s[j] == '4' || s[j] == '7')cur++;
     }
-    if(cur < k)ans++;
+    if(cur <= k)ans++;
     cur = 0;
   }  
   cout << ans;
 }
+
