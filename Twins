@@ -1,0 +1,25 @@
+#include <bits/stdc++.h> 
+using namespace std;
+
+int main() {
+
+int n,c=0,totalsum=0,mysum=0;
+cin>>n;
+int * a  = new int[n];
+for(int i = 0; i < n; i++) {
+	cin>>a[i];
+	totalsum +=a[i];
+}
+
+sort(a, a+n, greater<int>()); 
+
+for(int i = 0; i < n; i++) {
+	if( mysum >totalsum/2) break;
+	 c++;
+	 mysum+=a[i];
+}
+
+cout<<c<<endl;
+
+	return 0;
+}
